@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="AgendaJSF:war exploded">
+    <output-path>$PROJECT_DIR$/target/AgendaJSF</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="AgendaJSF/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="AgendaJSF" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.primefaces.themes:south-street:1.0.8" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.31" />
+          <element id="library" level="project" name="Maven: org.eclipse.persistence:eclipselink:2.5.1" />
+          <element id="library" level="project" name="Maven: org.eclipse.persistence:javax.persistence:2.1.0" />
+          <element id="library" level="project" name="Maven: org.eclipse.persistence:commonj.sdo:2.1.1" />
+          <element id="library" level="project" name="Maven: org.primefaces:primefaces:4.0" />
+          <element id="library" level="project" name="Maven: org.glassfish:javax.faces:2.1.6" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

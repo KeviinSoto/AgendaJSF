@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Editar contacto</title>
+    <h:outputStylesheet library="css" name="css.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="./resources/imagenes/Agenda.png"/>
+</h:head>
+<h:body>
+    <h:form>
+        <h1>Editar contacto</h1>
+        <h:panelGrid columns="3" styleClass="panelGrid">
+
+            <p:outputLabel value="Nombre" styleClass="nombre"/>
+            <p:inputText id="nombre"
+                         value="#{editarBean.contacto.nombre}"
+                         required="true"
+                         requiredMessage="El campo nombre es obligatorio"/>
+            <p:message for="nombre" styleClass="errorText"/>
+
+            <p:outputLabel value="Apellido"/>
+            <p:inputText id="apellido"
+                         value="#{editarBean.contacto.apellido}"
+                         required="true"
+                         requiredMessage="El campo apellido es obligatorio"/>
+            <p:message for="apellido" styleClass="errorText"/>
+
+            <p:outputLabel value="Telefono"/>
+            <p:inputText id="telefono"
+                         value="#{editarBean.contacto.telefono}"
+                         required="true"
+                         requiredMessage="El campo telefono es obligatorio"/>
+            <p:message for="telefono" styleClass="errorText"/>
+
+            <p:outputLabel value="Celular"/>
+            <p:inputText id="celular"
+                         value="#{editarBean.contacto.celular}"
+                         required="true"
+                         requiredMessage="El campo celular es obligatorio"/>
+            <p:message for="celular" styleClass="errorText"/>
+
+            <p:outputLabel value="Email"/>
+            <p:inputText id="email"
+                         value="#{editarBean.contacto.email}"
+                         required="true"
+                         requiredMessage="El campo email es obligatorio"/>
+            <p:message for="email" styleClass="errorText"/>
+
+            <p:commandButton value="Actualizar" action="#{editarBean.modificar}" ajax="false"/>
+            <p:button value="Mostrar" outcome="mostrar"/>
+            <br/>
+        </h:panelGrid>
+
+    </h:form>
+
+</h:body>
+</html>

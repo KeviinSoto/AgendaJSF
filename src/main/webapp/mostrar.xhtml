@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Mostrar Contactos</title>
+    <h:outputStylesheet library="css" name="css.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="./resources/imagenes/contact-list.png"/>
+</h:head>
+<h:body>
+    <h:form>
+        <h1>Contactos almacenados</h1>
+    <p:button value="Atras" outcome="index"/>
+    <h:panelGrid columns="4" styleClass="panelGrid_mostrar">
+    <p:outputLabel value="Buscar:"   />
+    <p:inputText id="buscar"
+                 value="#{contactosMainBean.texto_a_buscar}"
+                 required="true"
+                 requiredMessage="Falta elemento a buscar"/>
+    <p:commandButton value="Buscar" actionListener="#{contactosMainBean.buscar}" process="buscar" update="TablaDeContactos" ajax="false"/>
+    <p:message for="buscar" styleClass="errorText" />
+    </h:panelGrid>
+    </h:form>
+    <h:form>
+    <p:dataTable id="TablaDeContactos" value="#{contactosMainBean.contactosList}" var="contacto" rows="10"
+                 paginator="true"
+                 paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}">
+
+        <p:column headerText="Nombre" >
+            <h:outputText value="#{contacto.nombre}" />
+        </p:column>
+
+        <p:column headerText="Apellido">
+            <h:outputText value="#{contacto.apellido}" />
+        </p:column>
+
+        <p:column headerText="Telefono">
+            <h:outputText value="#{contacto.telefono}" />
+        </p:column>
+
+        <p:column headerText="Celular">
+            <h:outputText value="#{contacto.celular}" />
+        </p:column>
+
+        <p:column headerText="Email">
+            <h:outputText value="#{contacto.email}" />
+        </p:column>
+
+        <p:column headerText="Administracion">
+            <p:commandButton value="Modificar" ajax="false" action="editar">
+                <f:param name="id1" value="#{contacto.id}"/>
+            </p:commandButton>
+            <p:commandButton value="Eliminar" actionListener="#{contactosMainBean.eliminar(contacto.id)}" update="TablaDeContactos" ajax="false"/>
+        </p:column>
+    </p:dataTable>
+    </h:form>
+</h:body>
+</html>

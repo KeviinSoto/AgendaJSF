@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3478414611">
+    <data-source source="LOCAL" name="MySQL - @localhost" uuid="d3fd88ac-7044-40c1-bf50-6556af513a81">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfc1dfcfdfdcdfc3dfc4dfd9dfc5dfdedfc5</user-password>
+      <schema-pattern>*</schema-pattern>
+      <driver-properties>
+        <property name="zeroDateTimeBehavior" value="convertToNull" />
+        <property name="tinyInt1isBit" value="false" />
+      </driver-properties>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="AGENDA_PU" uuid="77255f4b-1bb4-431b-99b3-b067e387eb9b">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfc1dfcfdfdcdfc3dfc4dfd9dfc5dfdedfc5</user-password>
+      <libraries>
+        <library>
+          <url>file://C:\Users\Kevin Soto\.m2\repository\mysql\mysql-connector-java\5.1.31\mysql-connector-java-5.1.31.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
+</project>
+

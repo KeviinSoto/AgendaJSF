@@ -1,0 +1,32 @@
+.errorText{
+    color: red;
+}
+
+body{
+    background-color: limegreen;
+}
+
+h1{
+    font-family: Times New Roman;
+    margin-bottom: 0;
+    text-align: center;
+    margin-top: 0;
+}
+
+.panelGrid{
+    text-align: center;
+    margin-left: 450px;
+    margin-top: 20px;
+    font-family: Times New Roman;
+    font-size:16px;
+    border:solid 2px;
+    border-color: black;
+    padding:5px 50px 10px 50px;
+    border-radius: 15px;
+}
+
+.panelGrid_mostrar{
+    text-align: center;
+    margin-left: 450px;
+    padding: 5px;
+}
